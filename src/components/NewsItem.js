@@ -1,8 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export class NewItems extends Component {
-    render() {
-        let {title, description, imageUrl, newsUrl, author, publishedAt, sourceName} = this.props;
+const NewsItem = (props)=> {
+        let {title, description, imageUrl, newsUrl, author, publishedAt, sourceName} = props;
         let url="https://heise.cloudimg.io/bound/1200x1200/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/imgs/18/4/5/3/2/6/1/7/app_data-b5a70f8d80790860.png";
         return ( 
             <div className='my-3'>
@@ -23,6 +22,5 @@ export class NewItems extends Component {
             </div>
         )
     }
-}
 
-export default NewItems
+export default NewsItem
