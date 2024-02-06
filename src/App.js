@@ -16,7 +16,7 @@ const App = ()=> {
             <Navbar />
             <LoadingBar color='#f11946' height={3} progress={progress}/>
         <Routes>
-            <Route exact path="/"><News setProgress={setProgress} apiKey={apiKey} key="general" pageSize={pageSize} country="in" category="general"/></Route>
+            <Route exact path="/" element={<News setProgress={setProgress} key="general" pageSize={pageSize} country="in" category="general" apiKey={apiKey}/>}/>
             <Route exact path="/general" element={<News setProgress={setProgress} key="general" pageSize={pageSize} country="us" category='general' apiKey={apiKey}/>}/>
             <Route exact path="business" element={<News setProgress={setProgress} key="business" pageSize={pageSize} country="us" category='business' apiKey={apiKey}/>}/>
             <Route exact path="entertainment" element={<News setProgress={setProgress} key="entertainment" pageSize={pageSize} country="us" category='entertainment' apiKey={apiKey}/>}/>
